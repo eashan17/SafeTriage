@@ -27,7 +27,7 @@ app = FastAPI(
 )
 
 # ── CORS — configurable via ALLOWED_ORIGINS env var ─────────────────────────
-_default_origins = ["http://localhost:5173", "http://127.0.0.1:5173"]
+_default_origins = ["http://localhost:5173", "https://safe-triage.vercel.app"]
 _origins = os.getenv("ALLOWED_ORIGINS", "").split(",") if os.getenv("ALLOWED_ORIGINS") else _default_origins
 
 app.add_middleware(
